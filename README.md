@@ -13,7 +13,7 @@ This algorithm performs the following steps:
 	4) If the complete clique formed in step 3 is better than gBest, gBest = (3).
 	5) Continue from step 2 till some termination criteria (Number of Iterations)
 
-Instances are available <a href="http://www.nlsde.buaa.edu.cn/~kexu/benchmarks/graph-benchmarks.htm">here</a> and <a href="http://iridia.ulb.ac.be/~fmascia/maximum_clique/DIMACS-benchmark">here (DIMACS)</a>/
+Instances are available <a href="http://www.nlsde.buaa.edu.cn/~kexu/benchmarks/graph-benchmarks.htm">here</a> and <a href="http://iridia.ulb.ac.be/~fmascia/maximum_clique/DIMACS-benchmark">here (DIMACS)</a>.
 
 Usage:
 	- Change Constants.FILE to the file on your disk that represents the graph
