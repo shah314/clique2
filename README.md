@@ -15,6 +15,9 @@ This algorithm performs the following steps:
 
 Instances are available <a href="http://www.nlsde.buaa.edu.cn/~kexu/benchmarks/graph-benchmarks.htm">here</a> and <a href="http://iridia.ulb.ac.be/~fmascia/maximum_clique/DIMACS-benchmark">here (DIMACS)</a>. Please remove all comments and other extraneous text from the graph text instance file.
 
+<b>Cited By:</b><ul><li>Choi, Jang-Ho, et al. "Distributed coordination of IoT-based services by using a graph coloring algorithm." Computer Software and Applications Conference (COMPSAC), 2013 IEEE 37th Annual. IEEE, 2013.</li><li>Muklason, Ahmad. "Hyper-heuristics and fairness in examination timetabling problems." Philosophy (2017)</li>
+</ul>
+
 Usage:
 	- Change Constants.FILE to the file on your disk that represents the graph
 	- Change Constants.ANNEALING_ITERATIONS to the number of iterations the algorithm should run for
