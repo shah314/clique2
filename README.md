@@ -1,8 +1,10 @@
 <h2>Randomized Heuristic for the Maximum Clique Problem</h2>
 
-Author: Shalin Shah
+<b>Author: Shalin Shah</b>
 
 <a href="https://zenodo.org/badge/latestdoi/197826489"><img src="https://zenodo.org/badge/197826489.svg" alt="DOI"></a>
+
+<div align="center"><img src="https://github.com/shah314/clique/raw/master/clique.jpg" align="center" border="0"></div><br>
 
 A simple random search algorithm for the maximum clique problem. A clique of a graph is a set of vertices in which each pair in the set have an edge between them i.e. it is a complete subgraph. A clique of maximum  size is called the maximum clique. Finding the maximum clique of a graph is an NP-complete problem, and it it not possible to approximate the problem within a constant factor of the optimal.
 
