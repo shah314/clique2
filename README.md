@@ -6,7 +6,7 @@
 
 <div align="center"><img src="https://github.com/shah314/clique/raw/master/clique.jpg" align="center" border="0"></div><br>
 
-A simple random search algorithm for the maximum clique problem. A clique of a graph is a set of vertices in which each pair in the set have an edge between them i.e. it is a complete subgraph. A clique of maximum  size is called the maximum clique. Finding the maximum clique of a graph is an NP-complete problem, and it it not possible to approximate the problem within a constant factor of the optimal.
+A simple random search algorithm for the maximum clique problem in Java. A clique of a graph is a set of vertices in which each pair in the set have an edge between them i.e. it is a complete subgraph. A clique of maximum  size is called the maximum clique. Finding the maximum clique of a graph is an NP-hard problem, and it it not possible to approximate the problem within a constant factor of the optimum. The code uses an adjacency list format for the graph; so it does not require a lot of memory, and is quite fast for moderately large graphs. It finds reasonably good solutions for most graphs in the DIMACS benchmarks.
 
 This algorithm performs the following steps:
 
@@ -28,9 +28,17 @@ Instances are available <a href="http://www.nlsde.buaa.edu.cn/~kexu/benchmarks/g
 }
 </pre>
 <br>
-<b>Cited By:</b><ul><li>Choi, Jang-Ho, et al. "Distributed coordination of IoT-based services by using a graph coloring algorithm." Computer Software and Applications Conference (COMPSAC), 2013 IEEE 37th Annual. IEEE, 2013.</li><li>Muklason, Ahmad. "Hyper-heuristics and fairness in examination timetabling problems." Philosophy (2017)</li>
-</ul>
+<b>Usage:</b>
+<pre>
+- Change Constants.FILE to the file on your disk that represents the graph
+- Change Constants.CLIQUE_ITERATIONS to the number of iterations the algorithm should run for
+- Compile the code using any Java compiler (Tested using Java 8)
+- Then run <b>java MaxClique</b>
+- To use the code as an API, please see the main method in MaxClique.java
+</pre>
 
-Usage:
-	- Change Constants.FILE to the file on your disk that represents the graph
-	- Change Constants.ANNEALING_ITERATIONS to the number of iterations the algorithm should run for
+<b>Cited By:</b>
+<ul>
+<li>Choi, Jang-Ho, et al. "Distributed coordination of IoT-based services by using a graph coloring algorithm." Computer Software and Applications Conference (COMPSAC), 2013 IEEE 37th Annual. IEEE, 2013.</li>
+<li>Muklason, Ahmad. "Hyper-heuristics and fairness in examination timetabling problems." Philosophy (2017)</li>
+</ul>
