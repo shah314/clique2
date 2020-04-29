@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 /**
@@ -7,32 +6,31 @@ import java.util.*;
  * @author Shalin Shah
  * Email: shah.shalin@gmail.com
  */
-public class Clique 
-{    
+public class Clique
+{
     /* Possible additions */
     public LinkedHashSet pa;
-    
+
     /* The vertices that make up the clique */
     public LinkedHashSet clique;
-    
+
     /* A TreeMap of possible additions sorted according to their degrees */
     public TreeMap sortedPA;
-    
+
     /* The graph on which the algorithm runs */
     public Graph graph;
-    
+
     /* A random access list of the vertices that make up the clique */
     public List cliqueList;
-    
+
     /** Creates a new instance of Clique */
-    public Clique(int firstVertex, Graph graph) 
+    public Clique(int firstVertex, Graph graph)
     {
-        int [][] aMatrix = graph.aMatrix;
         pa = new LinkedHashSet();
         clique = new LinkedHashSet();
         sortedPA = new TreeMap();
         cliqueList = new ArrayList();
-        
+
         clique.add(new Integer(firstVertex));
         cliqueList.add(new Integer(firstVertex));
         this.graph = graph;
@@ -42,19 +40,32 @@ public class Clique
             {
                 continue;
             }
-            
-            if(aMatrix[i][firstVertex] == 1)
+
+            if(getEdge(i, firstVertex, graph) == 1)
             {
                 pa.add(new Integer(i));
                 sortedPA.put(graph.nodes[i], graph.nodes[i]);
             }
-        }   
+        }
     }
-    
-    /* 
+
+    /*
+     * Get an edge from the graph
+     */
+    public static int getEdge(int i, int j, Graph graph)
+    {
+    	if(graph.nodes[i].list.contains(j))
+    	{
+    		return 1;
+    	}
+
+    	return 0;
+    }
+
+    /*
      * Add a vertex to the clique and update the possible additions list.
      */
-    public void addVertex(int vertex, int [][] aMatrix)
+    public void addVertex(int vertex)
     {
         clique.add(new Integer(vertex));
         cliqueList.add(new Integer(vertex));
@@ -63,12 +74,12 @@ public class Clique
         for(Iterator it = pa.iterator(); it.hasNext();)
         {
             int pavertex = ((Integer)it.next()).intValue();
-            if(aMatrix[pavertex][vertex] == 0)
+            if(getEdge(pavertex, vertex, graph) == 0)
             {
                 it.remove();
                 removeFromSortedPA(graph.nodes[pavertex]);
             }
-            else if(aMatrix[pavertex][vertex] == 1)
+            else if(getEdge(pavertex, vertex, graph) == 1)
             {
                 // do nothing
             }
@@ -79,15 +90,15 @@ public class Clique
             }
         }
     }
-    
-    /* 
+
+    /*
      * Remove a vertex from the clique and update the possible additions list.
      */
-    public void removeVertex(int vertex, int [][]aMatrix)
+    public void removeVertex(int vertex)
     {
         if(!clique.contains(new Integer(vertex)))
             return;
-        
+
         clique.remove(new Integer(vertex));
         cliqueList.remove(new Integer(vertex));
         for(int i=0; i<Constants.NUMBER_NODES; i++)
@@ -103,13 +114,13 @@ public class Clique
                 while(it.hasNext())
                 {
                     int ver = ((Integer)it.next()).intValue();
-                    if(aMatrix[i][ver] == 0)
+                    if(getEdge(i, ver, graph) == 0)
                     {
                         flag = false;
                         break;
                     }
                 }
-                
+
                 if(flag)
                 {
                     pa.add(new Integer(i));
@@ -118,7 +129,7 @@ public class Clique
             }
         }
     }
-   
+
     /* Linear time remove method for TreeMap */
     private void removeFromSortedPA(Node node)
     {
@@ -133,9 +144,9 @@ public class Clique
             }
         }
     }
-    
-    /* 
-     * Compute a list of nodes based on degrees in the induced subgraph of 
+
+    /*
+     * Compute a list of nodes based on degrees in the induced subgraph of
      * possible additions (PA)
      */
     public List computeSortedList()
@@ -150,18 +161,18 @@ public class Clique
             while(itt.hasNext())
             {
                 int node2 = ((Integer)itt.next()).intValue();
-                if(graph.aMatrix[node1][node2] == 1)
+                if(getEdge(node1, node2, graph) == 1)
                 {
                     reach++;
                 }
             }
-            
+
             SortedListNode n = new SortedListNode();
             n.reach = reach;
             n.node = node1;
             sortedList.add(n);
         }
-        
+
         Collections.sort(sortedList);
         return sortedList;
     }
