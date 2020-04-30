@@ -38,7 +38,7 @@ Instances are available <a href="http://www.nlsde.buaa.edu.cn/~kexu/benchmarks/g
 </pre>
 
 <b>Results:</b><br>
-Results on some randomly chosen DIMACS graphs.
+Results on some randomly chosen DIMACS graphs. Please see <a href="http://iridia.ulb.ac.be/~fmascia/maximum_clique/DIMACS-benchmark">this page</a> for these and other maximum clique benchmarks (some with known optimum solutions).<br>
 <table>
 	<tr><td>Instance</td><td>Nodes</td><td>Edges</td><td>Best Known Clique</td><td>This Algorithm</td></tr>
 	<tr><td>C2000.5</td><td>2000</td><td>999836</td><td>16</td><td></td></tr>
