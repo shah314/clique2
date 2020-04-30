@@ -37,6 +37,16 @@ Instances are available <a href="http://www.nlsde.buaa.edu.cn/~kexu/benchmarks/g
 - To use the code as an API, please see the main method in MaxClique.java
 </pre>
 
+<b>Results:</b><br>
+Results on some randomly chosen DIMACS graphs.
+<table>
+	<tr><td>Instance</td><td>Nodes</td><td>Edges</td><td>Best Known Clique</td><td>This Algorithm</td></tr>
+	<tr><td>C2000.5</td><td>2000</td><td>999836</td><td>16</td><td></td></tr>
+	<tr><td>brock800_4</td><td>800</td><td>207643</td><td>26</td><td></td></tr>
+	<tr><td>gen400_p0.9_75</td><td>400</td><td>71920</td><td>75</td><td></td></tr>
+	<tr><td>p_hat700-1</td><td>700</td><td>60999</td><td>11</td><td></td></tr>
+	<tr><td>p_hat1500-3</td><td>1500</td><td>847244</td><td>94</td><td></td></tr>
+</table><br>
 <b>Cited By:</b>
 <ul>
 <li>Choi, Jang-Ho, et al. "Distributed coordination of IoT-based services by using a graph coloring algorithm." Computer Software and Applications Conference (COMPSAC), 2013 IEEE 37th Annual. IEEE, 2013.</li>
