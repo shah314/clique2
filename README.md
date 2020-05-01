@@ -36,7 +36,7 @@ Instances are available <a href="http://www.nlsde.buaa.edu.cn/~kexu/benchmarks/g
 - To use the code as an API, please see the main method in MaxClique.java
 </pre>
 
-<b>Results:</b><br><br>
+<b>Results:</b><br>
 Results on some randomly chosen DIMACS graphs. Please see <a href="http://iridia.ulb.ac.be/~fmascia/maximum_clique/DIMACS-benchmark">this page</a> for these and other maximum clique benchmarks (some with known optimum solutions). (You may have to run the algorithm a couple of times to get the best solution. It is quite fast and takes only a few seconds for 100,000 iterations).<br>
 <table>
 	<tr><td>Instance</td><td>Nodes (Vertices)</td><td>Edges</td><td>Best Known Clique</td><td>This Algorithm</td></tr>
