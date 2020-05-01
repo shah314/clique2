@@ -10,6 +10,15 @@ import java.util.*;
  {
      public static void main(String [] args) throws Exception
      {
+        if(args.length == 0)
+        {
+            System.out.println("Usage: java MaxClique <DIMACS File Name> <Number of Iterations>");
+            System.exit(0);
+        }
+
+        Constants.FILE = args[0];
+        Constants.CLIQUE_ITERATIONS = Integer.parseInt(args[1]);
+        
         System.out.println("Reading Graph...");
         /* Read the graph from Constants.FILE */
         Graph graph = GraphReader.readGraph();

@@ -6,20 +6,25 @@ import java.io.*;
  * Read the graph from Constants.FILE
  * See the following URL for instances:
  * http://www.nlsde.buaa.edu.cn/~kexu/benchmarks/graph-benchmarks.htm
- * 
+ *
  * @author Shalin Shah
  * Email: shah.shalin@gmail.com
  */
 public class GraphReader {
-    
+
     /** Creates a new instance of GraphReader */
     public GraphReader() {
     }
- 
+
     public static Graph readGraph() throws Exception
     {
         BufferedReader reader = new BufferedReader(new FileReader(new File(Constants.FILE)));
         String line = reader.readLine();
+        while(line.charAt(0) == 'c')
+        {
+            line = reader.readLine();
+        }
+        
         StringTokenizer token = new StringTokenizer(line, " ");
         token.nextToken();
         token.nextToken();
@@ -37,7 +42,7 @@ public class GraphReader {
             graph.addEdge(sv, ev);
             line = reader.readLine();
         }
-        
+
         return graph;
     }
 }

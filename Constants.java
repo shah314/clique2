@@ -14,10 +14,10 @@ public class Constants {
      * The format is specified by the following URL:
      * http://www.nlsde.buaa.edu.cn/~kexu/benchmarks/graph-benchmarks.htm
      */
-    public static final String FILE = "data.CLQ";
+    public static String FILE = "data.CLQ";
 
     /* The number of iterations */
-    public static final int CLIQUE_ITERATIONS = 5000;
+    public static int CLIQUE_ITERATIONS = 20000;
 
     /* Random Restart Parameters */
     public static final int TOLERANCE = 1000;
