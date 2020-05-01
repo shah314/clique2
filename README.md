@@ -30,10 +30,9 @@ Instances are available <a href="http://www.nlsde.buaa.edu.cn/~kexu/benchmarks/g
 <br>
 <b>Usage:</b>
 <pre>
-- Change Constants.FILE to the file on your disk that represents the graph
-- Change Constants.CLIQUE_ITERATIONS to the number of iterations the algorithm should run for
 - Compile the code using any Java compiler (Tested using Java 8)
-- Then run <b>java MaxClique</b>
+- Then run <b>java MaxClique <DIMACS File Name> <Number of Iterations></b>
+- Typical number of iterations is 20000
 - To use the code as an API, please see the main method in MaxClique.java
 </pre>
 
