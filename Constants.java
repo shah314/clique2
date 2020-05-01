@@ -17,7 +17,7 @@ public class Constants {
     public static String FILE = "data.CLQ";
 
     /* The number of iterations */
-    public static int CLIQUE_ITERATIONS = 20000;
+    public static int CLIQUE_ITERATIONS = 100000;
 
     /* Random Restart Parameters */
     public static final int TOLERANCE = 1000;
