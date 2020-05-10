@@ -31,6 +31,7 @@ Instances are available <a href="http://www.nlsde.buaa.edu.cn/~kexu/benchmarks/g
 <b>Usage:</b>
 <pre>
 - Compile the code using any Java compiler (Tested using Java 8)
+- e.g. <b>javac *.java</b>
 - Then run <b>java MaxClique filename iterations</b>
 - e.g. <b>java MaxClique instances/C2000.5.CLQ 100000</b>
 - Typical number of iterations is 100000
