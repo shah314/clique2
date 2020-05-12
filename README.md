@@ -24,7 +24,8 @@ Instances are available <a href="http://www.nlsde.buaa.edu.cn/~kexu/benchmarks/g
 @misc{shah2016randomized,
   title={Randomized heuristic for the maximum clique problem},
   author={Shah, Shalin},
-  year={2016}
+  year={2016},
+  DOI={10.5281/zenodo.3818578}
 }
 </pre>
 <br>
